@@ -1,34 +1,29 @@
 # Hessian-Based Methods for Optimization
 UCLA CS260D - Large Scale Machine Learning Final Project
 
-## 1. Hessian Approximation
+## 1. Quadratic Adam Approximation (Needs to edit)
 - **Concept**: This method modifies AdaHessian by approximating the Hessian using the diagonal elements. Instead of leveraging the full curvature, it uses a simplified form of the second-order information for faster computation.
 - **Difference from AdaHessian**:
   - Simplified diagonal approximation for Hessian.
   - Reduced computational overhead.
 - **Contribution**:
   - Offers a balance between computational efficiency and the effectiveness of second-order optimization.
-- **Potential Improvements**:
-  - Incorporate block-diagonal Hessian approximations for more curvature details without significant computational costs.
 
-## 2. Nonlinear Hessian
+## 2. Nonlinear Hessian (needs edit)
 - **Concept**: Extends AdaHessian by incorporating a nonlinear transformation (e.g., `tanh`) of the gradient. This allows capturing nonlinearity in the loss surface.
 - **Difference from AdaHessian**:
   - Adds a nonlinear factor (`tanh`) to modify the gradient.
   - Attempts to better adapt to non-convex loss surfaces.
 - **Contribution**:
   - Handles nonlinearity in optimization, which could improve convergence for complex surfaces.
-- **Potential Improvements**:
-  - Explore other nonlinear functions or learnable transformations for more flexibility.
 
-## 3. Multi-Scale Hessian
+## 3. Multi-Scale Hessian (needs edit)
 - **Concept**: Combines curvature information at multiple scales. It adjusts learning rates dynamically based on local and global curvature estimates.
 - **Difference from AdaHessian**:
   - Incorporates multi-scale Hessian approximations, unlike AdaHessian, which uses a single scale.
 - **Contribution**:
   - Balances local adaptability and global convergence for optimization problems.
-- **Potential Improvements**:
-  - Combine with adaptive learning rates for enhanced efficiency in multi-scale environments.
+
 
 ## 4. Hybrid Hessian-Gradient
 - **Concept**: A hybrid method that blends gradient and Hessian-based updates. It dynamically transitions from gradient-based optimization to Hessian-based optimization as training progresses.
